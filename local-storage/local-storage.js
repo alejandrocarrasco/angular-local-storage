@@ -23,7 +23,7 @@ StorageModule.provider('StorageProvider', function () {
 
     this.$get = function ($cookieStore, LocalStorage) {
         if (isLocalStorageSupported()) {
-            return keyValueLocalStorageService;
+            return LocalStorage;
         } else {
             return $cookieStore;
         }

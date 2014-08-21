@@ -1,29 +1,29 @@
 /**
- * Module to use HTML5's LocalStorage in AngularJS
+ * Module to use HTML5's KeyValueStorage in AngularJS
  * @authors: Miguel Angel Carrasco, Alejandro Carrasco
  */
-angular.module('localStorage', ['ngCookies']);
+angular.module('KeyValueStorage', ['ngCookies']);
 
-var StorageModule = angular.module('localStorage');
+var StorageModule = angular.module('KeyValueStorage');
 /**
  * Proveedor de servicios para almacenar datos como clave/valor.
  * usa el servicio de html5 local storage si el navegador lo soporta,
  * de lo contrario usa cookies.
  */
-StorageModule.provider('StorageProvider', function () {
-    function isLocalStorageSupported() {
+StorageModule.provider('KeyValueStorage', function () {
+    function isKeyValueStorageSupported() {
         try {
-            localStorage.setItem("AngularLocalStorageTest", "test");
-            localStorage.removeItem("AngularLocalStorageTest");
+            localStorage.setItem("AngularKeyValueStorageTest", "test");
+            localStorage.removeItem("AngularKeyValueStorageTest");
             return true;
         } catch (e) {
             return false;
         }
     }
 
-    this.$get = function ($cookieStore, LocalStorage) {
-        if (isLocalStorageSupported()) {
-            return LocalStorage;
+    this.$get = function ($cookieStore, KeyValueStorageService) {
+        if (isKeyValueStorageSupported()) {
+            return KeyValueStorageService;
         } else {
             return $cookieStore;
         }
@@ -33,7 +33,7 @@ StorageModule.provider('StorageProvider', function () {
 /**
  * Servicio para utilizar el localStorage
  */
-StorageModule.service('LocalStorage', function () {
+StorageModule.service('KeyValueStorageService', function () {
     this.get = function (key) {
         return JSON.parse(localStorage.getItem(key));
     };

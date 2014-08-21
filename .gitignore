@@ -1,0 +1,4 @@
+# Ignorando intelliJ
+*.iml
+.idea
+

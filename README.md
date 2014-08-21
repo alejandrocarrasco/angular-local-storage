@@ -1,4 +1,4 @@
-angular-local-storage
+Angular Local Storage
 =====================
 
 Repository to use local storage or cookies if browser does not have local-storage

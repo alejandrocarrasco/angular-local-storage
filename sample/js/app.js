@@ -6,3 +6,7 @@ var keyValueApp = angular.module('KeyValueApp', [
     'KeyValueStorage',
     'ngCookies'
     ]);
+
+keyValueApp.config(function (){
+   // No conf
+});

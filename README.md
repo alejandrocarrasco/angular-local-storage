@@ -3,11 +3,23 @@ Angular Key Value Storage
 
 Repository to use local storage or cookies if browser does not have local-storage
 
+Requirements
+------------
+This module requires you to use angular 1.2.13 or superior
+Also you need to add ngCookies to your app:
+```
+angular.module('MyApp', [ ... , 'ngCookies' ])
+
+
+<script src="path/to/lib/angular/angular-cookies.min.js"></script>
+```
+
+
 Installation
 ------------
 Add "localStorage" to your app modules list:
 ```
-angular.module('MyApp', [ ... , 'KeyValueStorage' ])
+angular.module('MyApp', [ ... , 'KeyValueStorage', 'ngCookies' ])
 ```
 
 Add the file in your scripts list:

@@ -5,6 +5,10 @@ Repository to use local storage or cookies if browser does not have local-storag
 
 [GitHub page](http://alejandrocarrasco.github.io/angular-key-value-storage)
 
+Sample
+------
+[Here](http://alejandrocarrasco.github.io/angular-key-value-storage/sample/) is a live sample of this module
+
 Requirements
 ------------
 This module requires you to use angular 1.2.13 or superior

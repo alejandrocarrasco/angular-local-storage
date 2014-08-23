@@ -2,6 +2,7 @@ Angular Key Value Storage
 =====================
 
 Repository to use local storage or cookies if browser does not have local-storage
+
 [GitHub page](http://alejandrocarrasco.github.io/angular-key-value-storage)
 
 Requirements

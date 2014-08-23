@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Key Value Storage Sample</title>
+</head>
+<body ng-app="KeyValueApp">
+<header>
+    <h1>Key Value Storage Sample</h1>
+</header>
+<article ng-controller="KeyValueCtrl">
+    <section>
+        <h2>Set Value</h2>
+        Key: <input type="text" ng-model="key" /><br/>
+        Value: <input type="text" ng-model="value" /><br/>
+        <input type="button" ng-click="setValue(key,value)" value="Set Value" />
+    </section>
+    <section>
+        <h2>Read Value</h2>
+        Key: <input type="text" ng-model="keyRead" /><br/>
+        <input type="button" ng-click="readValue(keyRead)" value="Read Value" />
+        <span ng-if="valueRead">Value: {{valueRead}}</span>
+    </section>
+    <section>
+        <h2>Delete Value</h2>
+        Key: <input type="text" ng-model="keyDel" /><br/>
+        <input type="button" ng-click="delValue(keyDel)" value="Delete Value" />
+    </section>
+    <section ng-if="valuesStorage">
+        <h2>LocalStorage Values</h2>
+        <div ng-repeat="v in valuesStorage">
+            <span>Key: {{v.key}}, </span>
+            <span>Value: {{v.value}}</span>
+        </div>
+    </section>
+    <section ng-if="cookies[0] != '' ">
+        <h2>Cookies</h2>
+        <div ng-repeat="c in cookies">
+            {{c}}
+        </div>
+    </section>
+</article>
+<!-- Scripts -->
+<script type="application/javascript" src="lib/angular/angular.min.js"></script>
+<script type="application/javascript" src="lib/angular/angular-cookies.min.js"></script>
+
+<!-- Libs -->
+<script type="application/javascript" src="lib/key-value-storage/key-value-storage.js"></script>
+
+<!-- AppFiles -->
+<script type="application/javascript" src="js/app.js"></script>
+<script type="application/javascript" src="js/controllers.js"></script>
+
+</body>
+</html>

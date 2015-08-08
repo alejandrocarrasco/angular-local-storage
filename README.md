@@ -3,11 +3,11 @@ Angular Key Value Storage
 
 Repository to use local storage or cookies if browser does not have local-storage
 
-[GitHub page](http://alejandrocarrasco.github.io/angular-key-value-storage)
+[GitHub page](http://cyberdelphos.github.io/angular-key-value-storage)
 
 Sample
 ------
-[Here](http://alejandrocarrasco.github.io/angular-key-value-storage/sample/) is a live sample of this module
+[Here](http://cyberdelphos.github.io/angular-key-value-storage/sample/) is a live sample of this module
 
 Requirements
 ------------
